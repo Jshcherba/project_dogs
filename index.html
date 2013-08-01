@@ -15,7 +15,7 @@
 <script type="text/javascript">
     Owner = Class.create({
         name : 'George',
-        dogs : new Array(),
+        dogs : [],
         initialize : function(name){
             this.name = name;
             console.log('My name is ' + this.name);
@@ -32,7 +32,7 @@
             } else{
                 console.log(this.name + ' comanded \"Come!\" to all his dogs');
                 for (var key in this.dogs) {
-                    if (typeof this.dogs[key] == 'object'){
+                    if (typeof this.dogs[key] == 'Dog'){
                         this.dogs[key].come();
                     }
                 }
